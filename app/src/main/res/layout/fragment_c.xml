@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:context=".FragmentC">
+
+    <TextView
+        android:id="@+id/tvPrimeiroTextoC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="Para o frag A enviar duas Strings. Para o frag B enviar um boolean e um Inteiro "
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSegundoTextoC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="--"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrimeiroTextoC" />
+
+    <EditText
+        android:id="@+id/et1C"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Primeiro parametro "
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSegundoTextoC" />
+
+    <EditText
+        android:id="@+id/et2C"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Segundo parametro"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et1C" />
+
+    <Button
+        android:id="@+id/btnbotao1C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="-> Frag A"
+        android:backgroundTint="@color/black"
+        android:layout_marginLeft="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et2C" />
+
+    <Button
+        android:id="@+id/btnbotao2C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="60dp"
+        android:text="-> Frag B"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et2C" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

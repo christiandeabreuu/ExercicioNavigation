@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacao"
+    app:startDestination="@id/fragmentA">
+
+    <fragment
+        android:id="@+id/fragmentA"
+        android:name="br.com.zup.ex_felipe.FragmentA"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a" >
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentB"
+            app:destination="@id/fragmentB" />
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentC"
+            app:destination="@id/fragmentC" />
+        <argument
+            android:name="primeiroNumero"
+            app:argType="string" />
+        <argument
+            android:name="segundoNumero"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentB"
+        android:name="br.com.zup.ex_felipe.FragmentB"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/action_fragmentB_to_fragmentC"
+            app:destination="@id/fragmentC" />
+        <action
+            android:id="@+id/action_fragmentB_to_fragmentA"
+            app:destination="@id/fragmentA" />
+        <argument
+            android:name="booleanExemplo"
+            app:argType="boolean" />
+        <argument
+            android:name="exemploInteiro"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentC"
+        android:name="br.com.zup.ex_felipe.FragmentC"
+        android:label="fragment_c"
+        tools:layout="@layout/fragment_c" >
+        <action
+            android:id="@+id/action_fragmentC_to_fragmentB"
+            app:destination="@id/fragmentB" />
+        <action
+            android:id="@+id/action_fragmentC_to_fragmentA"
+            app:destination="@id/fragmentA" />
+        <argument
+            android:name="parametros"
+            app:argType="br.com.zup.ex_felipe.Parametros" />
+    </fragment>
+</navigation>
